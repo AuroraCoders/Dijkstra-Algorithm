@@ -92,7 +92,6 @@ void insert_edge(char u,char v,int d){
 	}
 	ptr->link=tmp;
 }
-
 void display(){
 	node *ptr;
 	edge *q;
@@ -235,7 +234,7 @@ int main(){
 	else{
 		insert_edge(s,d,distance);
 		insert_edge(d,s,distance);
-}		
+	}
 	}
 	display();
 	char destination;
@@ -243,8 +242,9 @@ int main(){
 	cout<<"Enter source "<<endl;
 	cin>>s1;
 	find_path(s1);
+	for(int i=0;i<num-1;i++){
 	cout<<"Enter destination for path"<<endl;
 	cin>>destination;
-	traverse_path( s1,destination);
-		
+	traverse_path(s1,destination);
+	}	
 }
